@@ -1,0 +1,337 @@
+header {
+  background-color: var(--bgb);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+}
+
+header a {
+  color: var(--action);
+}
+
+header span img {
+  height: 100%;
+}
+
+header span {
+  height: 100%;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+
+header nav ul li span {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-color: var(--action);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1.6) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 2) * 0.1s);
+  z-index: -1;
+}
+
+header nav ul li:hover span {
+  transform: translateY(0) scale(2);
+}
+
+header nav ul li span:nth-child(1) {
+  --n: 1;
+}
+
+header nav ul li span:nth-child(2) {
+  --n: 2;
+}
+
+header nav ul li span:nth-child(3) {
+  --n: 3;
+}
+
+header nav ul li span:nth-child(4) {
+  --n: 4;
+}
+
+.buscadorHome {
+  display: flex;
+  align-items: center;
+}
+
+.buscar {
+  color: white;
+  border: 0.12em solid var(--action);
+  border-radius: 0.5em;
+  height: 3rem;
+  width: 35rem;
+  background: transparent;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.log {
+  color: var(--action);
+  font-family: var(--body);
+  font-size: 1rem;
+  display: flex;
+}
+
+.logout {
+  width: 50px;
+  height: 50px;
+}
+
+.logo {
+  margin-left: 2rem;
+}
+
+.lupa {
+  height: 2rem;
+}
+
+.logo-recomendaciones {
+  display: flex;
+
+  height: 3rem;
+
+  min-width: 5rem;
+
+  cursor: pointer;
+  padding: 10px;
+}
+
+.recom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--body);
+  font-size: 1rem;
+  color: var(--action);
+  background-color: var(--bgb);
+  border: 0.12em solid var(--action);
+  border-radius: 0.5em;
+  height: 3rem;
+  max-width: 10em;
+  min-width: 5rem;
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.moñeco {
+  width: 3em;
+  height: 3em;
+  position: relative;
+}
+
+.recomButton:hover {
+  color: var(--bgb);
+}
+.recomButton {
+  padding: 9px 6px;
+}
+
+.header-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: solid 1px;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+
+.header-avatar-image {
+  width: 100%;
+  min-height: 100%;
+}
+
+@media (max-width: 450px) {
+  header {
+    width: 100vw;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 1px;
+    overflow: hidden;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo-recomendaciones {
+    min-width: 0;
+    height: 20vh;
+    width: 8vw;
+    padding: 0;
+  }
+
+  .recom {
+    font-size: 0.8rem;
+    height: 50px;
+    border: none;
+    min-width: 5px;
+    margin: 0;
+  }
+
+  .recomButton:hover {
+    color: inherit;
+  }
+
+  .logo-logout {
+    height: 8vh;
+    width: 9vw;
+  }
+
+  .lupa {
+    height: 10vh;
+    width: 8vw;
+  }
+
+  .buscar {
+    display: none;
+  }
+
+  header nav ul li span {
+    display: none;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+  header {
+    height: 10vh;
+    justify-content: center;
+    gap: 5vw;
+  }
+
+  header nav ul {
+    gap: 0;
+    margin-right: 0;
+    gap: 5vw;
+  }
+
+  header .recom li {
+    width: 5vw;
+  }
+
+  header span img {
+    display: none;
+  }
+
+  .header-avatar {
+    width: 40px;
+    height: 40px;
+    margin-top: 1vh;
+  }
+
+  .logo-recomendaciones {
+    min-width: 0;
+    max-height: 3rem;
+  }
+
+  .buscar {
+    display: none;
+  }
+
+  .recom {
+    margin: 0;
+    height: 2rem;
+    min-width: none;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .moñeco {
+    width: 2em;
+  }
+
+  .moñeco svg {
+    margin-top: 1.8vh;
+  }
+
+  .recomButton:hover {
+    color: inherit;
+  }
+
+  header nav ul li span {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1439px) {
+  header {
+    height: 8vh;
+    justify-content: center;
+    gap: 5vw;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+    gap: 5vw;
+  }
+
+  .header-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-recomendaciones {
+    min-width: 0;
+    height: 3rem;
+  }
+
+  .buscar {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 1rem;
+  }
+
+  .moñeco {
+    width: 2em;
+  }
+
+  .moñeco svg {
+    margin-top: 1.8vh;
+  }
+
+  .recomButton:hover {
+    color: inherit;
+  }
+
+  header nav ul li span {
+    display: none;
+  }
+}

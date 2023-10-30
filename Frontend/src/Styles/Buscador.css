@@ -1,0 +1,83 @@
+.buscador {
+  background-color: var(--mainbg);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+}
+
+.buscador section {
+  height: 100%;
+}
+
+.buscador form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buscador form fieldset {
+  border: none;
+  margin-bottom: 1rem;
+  width: 70%;
+}
+
+.buscador h1 {
+  margin: 100px 0;
+  text-align: center;
+  color: var(--action);
+  font-size: 2.5rem;
+}
+
+.buscador form label {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.buscador form input {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.buscador figure {
+  height: 100%;
+}
+
+.buscador img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.buscador button {
+  padding: 0.5rem 1rem;
+  background-color: var(--action);
+  color: var(--bright);
+  border: none;
+  font-size: 1.3rem;
+}
+
+.inputText {
+  height: 8rem;
+}
+
+.buscador select {
+  width: 100%;
+}
+
+@media (max-width: 450px) {
+  .buscador-movil fieldset {
+    margin-bottom: 2rem;
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .buscador-movil input {
+    width: 30vw;
+    color: var(--bgb);
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+    font-size: 1.6rem;
+  }
+}

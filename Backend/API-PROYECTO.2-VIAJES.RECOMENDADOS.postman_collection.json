@@ -1,0 +1,311 @@
+{
+  "info": {
+    "_postman_id": "b106458e-fc5f-4282-b52b-9f728a765f65",
+    "name": "API-PROYECTO.2-VIAJES.RECOMENDADOS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28582414"
+  },
+  "item": [
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Registro",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Dani\",\n    \"mail\": \"daninovo@gmail.com\",\n    \"pwd\": \"1234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/usuarios",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["usuarios"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"mail\": \"daninovo@gmail.com\",\n    \"pwd\": \"1234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/usuarios/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["usuarios", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Avatar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTY5MDk5NDU3NywiZXhwIjoxNjkxMDgwOTc3fQ.z--T5k-PtHbLVz_1Z4XNr9NzHKoYrIhSl343vvpjti4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "avatar",
+                  "type": "file",
+                  "src": "/home/hacker/Escritorio/descarga.jpeg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3001/usuarios/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["usuarios", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Recomendaciones",
+      "item": [
+        {
+          "name": "Postear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTY5MTA3NjkyMSwiZXhwIjoxNjkxMTYzMzIxfQ.JRpq9VJcs5IsoLfXnlbTSv2z6whC7W1IYpvrdIM7MGA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Visitando A Coruña",
+                  "type": "text"
+                },
+                {
+                  "key": "category",
+                  "value": "Ciudad",
+                  "type": "text"
+                },
+                {
+                  "key": "place",
+                  "value": "A Coruña",
+                  "type": "text"
+                },
+                {
+                  "key": "intro",
+                  "value": "Mi visita a la ciudad de cristal",
+                  "type": "text"
+                },
+                {
+                  "key": "text",
+                  "value": "Hace un tiempo visité A Coruña, una encantadora ciudad costera en España. Quedé maravillado por su hermoso paseo marítimo, la Torre de Hércules, y las impresionantes playas. Disfruté de su deliciosa gastronomía, especialmente el pulpo a la gallega. Fue una experiencia inolvidable llena de cultura.",
+                  "type": "text"
+                },
+                {
+                  "key": "photo",
+                  "type": "file",
+                  "src": "/C:/Users/Fran/Downloads/Torre.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3001/recomendaciones",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["recomendaciones"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Votar",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTY5MTA3NjkyMSwiZXhwIjoxNjkxMTYzMzIxfQ.JRpq9VJcs5IsoLfXnlbTSv2z6whC7W1IYpvrdIM7MGA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"vote\": \"7\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/recomendaciones/1/votar",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["recomendaciones", "1", "votar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Publicar comentario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTY5MTA3NjkyMSwiZXhwIjoxNjkxMTYzMzIxfQ.JRpq9VJcs5IsoLfXnlbTSv2z6whC7W1IYpvrdIM7MGA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"comment\": \"Una parte de la ciudad muy bonita\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/recomendaciones/1/comentarios",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["recomendaciones", "1", "comentarios"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/recomendaciones",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["recomendaciones"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/recomendaciones/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["recomendaciones", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Por lugar",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/recomendaciones/lugar/A Coruña",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["recomendaciones", "lugar", "A Coruña"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Por categoría",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/recomendaciones/categoria/ciudad",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["recomendaciones", "categoria", "ciudad"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ordenar por votos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/recomendaciones/ordenar-por-votos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["recomendaciones", "ordenar-por-votos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6Im5vcm1hbCIsImlhdCI6MTY5MTA3NjkyMSwiZXhwIjoxNjkxMTYzMzIxfQ.JRpq9VJcs5IsoLfXnlbTSv2z6whC7W1IYpvrdIM7MGA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3001/recomendaciones/13",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["recomendaciones", "13"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

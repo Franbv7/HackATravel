@@ -1,0 +1,26 @@
+.footer {
+  color: var(--action);
+  background-color: var(--bgb);
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--action);
+}
+
+@media (max-width: 450px) {
+  .footer {
+    font-size: 0.7rem;
+    width: 100vw;
+    height: 2rem;
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+  .footer {
+    height: 2rem;
+  }
+}

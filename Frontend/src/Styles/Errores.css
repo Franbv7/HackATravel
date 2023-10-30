@@ -1,0 +1,53 @@
+.error-notfound {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-notfound img {
+  width: 65%;
+  height: 85%;
+  position: relative;
+}
+
+.error-notfound h1 {
+  color: #fff;
+  font-family: var(--sol);
+  font-size: 3.7rem;
+  position: absolute;
+  top: 39%;
+  z-index: 5;
+}
+
+.error-notfound a {
+  position: absolute;
+  bottom: 12%;
+  right: 25.7%;
+}
+
+@media (max-width: 450px) {
+  .error-notfound img {
+    width: 95%;
+    height: 40%;
+    position: relative;
+  }
+
+  .search-error {
+    width: 95vw;
+  }
+
+  .error-notfound h1 {
+    left: 4%;
+  }
+
+  .error-notfound a {
+    right: 32%;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+  .search-error {
+    width: 95vw;
+  }
+}

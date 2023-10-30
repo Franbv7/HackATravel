@@ -1,0 +1,43 @@
+.cookies {
+  margin-left: 0.5rem;
+}
+
+.cookies h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.cookies h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.cookies h3 {
+  font-size: 1.2rem;
+}
+
+.cookies p {
+  margin-top: 0.3rem;
+  margin-left: 0.8rem;
+}
+
+.cookies-container {
+  margin-left: 1rem;
+}
+
+.cookies-container h3 {
+  margin-top: 1.2rem;
+}
+
+.cookies-container ul {
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 450px) {
+  .cookies {
+    margin-bottom: 9vh;
+  }
+}

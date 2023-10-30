@@ -1,0 +1,34 @@
+.buscador-movil {
+  --width-of-input: 200px;
+  --border-height: 1px;
+  --border-before-color: rgba(221, 221, 221, 0.39);
+  --border-after-color: #5891ff;
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  color: var(--action);
+  display: none;
+}
+
+.input-movil {
+  color: var(--bgb);
+  font-family: var(--body);
+  font-size: 1.5rem;
+  background-color: transparent;
+  width: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.35em;
+  border: none;
+  border-bottom: 1px solid var(--bgb);
+}
+
+@media (max-width: 1439px) {
+  .buscador-movil {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+}
