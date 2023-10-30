@@ -5,6 +5,7 @@ const fileupload = require("express-fileupload");
 const path = require("path");
 const createStaticDir = require("../src/service/createStaticDir");
 const cors = require("cors");
+import { PORT } from "../index.js";
 
 const userRouter = require("../src/router/userRouter");
 const entriesRouter = require("../src/router/entriesRouter");
