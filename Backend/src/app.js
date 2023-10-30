@@ -9,28 +9,28 @@ const cors = require("cors");
 const userRouter = require("../src/router/userRouter");
 const entriesRouter = require("../src/router/entriesRouter");
 
-const server = express();
+const app = express();
 
-server.use(cors());
+app.use(cors());
 
-server.use(express.json());
-server.use(morgan("dev"));
-server.use(fileupload());
+app.use(express.json());
+app.use(morgan("dev"));
+app.use(fileupload());
 
 const staticDir = path.join(__dirname, "uploads");
 
-server.use("/uploads", express.static(staticDir));
+app.use("/uploads", express.static(staticDir));
 
 createStaticDir(staticDir);
 
-server.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("<h3>Hello World</h3>");
 });
 
-server.use(userRouter);
-server.use(entriesRouter);
+app.use(userRouter);
+app.use(entriesRouter);
 
-server.use(function (req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:5173");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.header(
@@ -45,11 +45,11 @@ server.use(function (req, res, next) {
   }
 });
 
-server.use((err, _req, res, _next) => {
+app.use((err, _req, res, _next) => {
   const status = err.status || 500;
   const message = err.message || err;
   console.error(err);
   res.status(status).send(message);
 });
 
-module.exports = server;
+module.exports = app;
